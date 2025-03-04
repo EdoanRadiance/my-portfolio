@@ -11029,3 +11029,44 @@ section.resume-section .resume-section-content {
   font-size: 1rem;
   color: #666;
 }
+
+.project-card {
+  background-color: #003DA5;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover {
+  background-color: #C35000;
+  color: black;
+}
+
+.tech-tags {
+  margin-top: 10px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tech-tag:hover {
+  background-color: #333;
+  color: white;
+}
+
+.project-card h3, .project-card p, .project-card {
+  color: white;
+}
+
+
+.project-card:hover h3, .project-card:hover p, .project-card:hover .tech-tag {
+  color: black;
+}
+
+
