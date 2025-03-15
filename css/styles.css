@@ -10974,45 +10974,61 @@ section.resume-section .resume-section-content {
 /* Projects Section */
 #Projects {
   padding: 4rem 2rem;
-  background-color: #f9f9f9; /* Light background */
+  background-color: #f5f7fa;
   text-align: center;
 }
 
 #Projects h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 2rem;
+  color: #222;
 }
 
 /* Projects Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Project Card */
 .project-card {
-  background: white;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #1E2A38, #2C3E50);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  min-height: 400px; /* Ensures the card always has a taller height */
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Image */
-.project-image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.project-image {
+  text-align: left; /* Center the icon */
+  position:relative;
+  margin-bottom: -19px;
+  left: 13px;
+  margin-top: 20px;
+  
 }
+
+.project-image img {
+  width: 50px; /* Smaller icon size */
+  height: 40px;
+  object-fit: contain; /* Ensure the whole image fits without cropping */
+  filter: invert(100%); /* Turns black images white */
+  display: inline-block;
+}
+
+
 
 /* Project Info */
 .project-info {
@@ -11021,52 +11037,245 @@ section.resume-section .resume-section-content {
 }
 
 .project-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #f4f4f4; /* Light text for visibility */
 }
 
 .project-info p {
   font-size: 1rem;
-  color: #666;
+  color: #ccc; /* Slightly lighter for contrast */
+  line-height: 1.6;
 }
 
-.project-card {
-  background-color: #003DA5;
-  color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.project-card:hover {
-  background-color: #C35000;
-  color: black;
-}
-
+/* Tech Tags */
 .tech-tags {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .tech-tag {
   display: inline-block;
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 5px 10px;
-  margin-right: 5px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f4f4f4;
+  padding: 6px 12px;
+  margin-right: 6px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .tech-tag:hover {
-  background-color: #333;
-  color: white;
+  background-color: #E0A960; /* Gold for a nice pop */
+  color: #1E2A38; /* Dark text for contrast */
 }
 
-.project-card h3, .project-card p, .project-card {
-  color: white;
-}
-
-
+/* Hover Effect for Text */
 .project-card:hover h3, .project-card:hover p, .project-card:hover .tech-tag {
-  color: black;
+  color: #fff;
 }
 
 
+
+.school-logo {
+  width: 200px; /* Adjust size to your liking */
+  height: auto;
+  object-fit: cover;
+}
+
+.utd-logo {
+  width: 200px; /* Make the Dallas logo bigger */
+}
+
+.d-flex.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.mr-3 {
+  margin-right: 1rem; /* Space between logo and text */
+}
+
+
+/* Button Styling */
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #000; /* Black outline */
+  border-radius: 5px;
+  background-color: white; /* White background */
+  color: #000; /* Black text */
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #000; /* Black background on hover */
+  color: white; /* White text on hover */
+  border-color: #000; /* Keep black
+}
+
+
+/* Styling for the Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #003DA5; /* Blue border on focus */
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #003DA5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #C35000; /* Hover effect */
+}
+
+
+/* Styling for the Contact Form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #003DA5; /* Blue border on focus */
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #003DA5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #C35000; /* Hover effect */
+}
+
+/* Styling for the Powered by Formspree text */
+.powered-by {
+  margin-top: 1rem;
+  text-align: left; /* Ensure the text is aligned to the left */
+  font-size: 1.2rem;
+  color: #333;
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Vertically center the items */
+}
+
+.powered-by p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 10px; /* Add some space between the text and image */
+}
+
+.formspree-link {
+  color: #003DA5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.formspree-link:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the Formspree logo */
+.formspree-logo {
+  margin-top: 0.5rem;
+  max-width: 100px; /* Limit the width */
+  max-height: 30px; /* Limit the height */
+  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+
+
+}
